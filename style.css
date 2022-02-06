@@ -1,0 +1,224 @@
+/* Vitória Borges Fontoura */
+:root {
+	--background: #9bdafa;
+	--title: #767679;
+	--button: #0875bd;
+	--dark-blue: #5da9db;
+	--gray: #9c9c9c;
+	--button-title: #e6e6e6;
+
+}
+
+body {
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+	background: var(--background);
+
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	display: flex;
+	width: 79%;
+	height: 26.6rem;
+	
+	margin-top: 2.4rem;
+	background: white;
+
+	flex-direction: column;
+	align-items: center;
+
+	border-radius: 0.5rem;
+	box-shadow: rgba(0, 0, 0, 0.10) 0px 20px 20px;
+}
+
+.container h2 {
+	margin-top: 3rem;
+	color: var(--title);
+}
+
+.container form {
+	display: flex;
+
+	flex-wrap: wrap;
+
+	align-items: center;
+	justify-content: center;
+
+	gap: 18px 26px;
+}
+
+.custom-field {
+	position: relative;
+	font-size: 0.8rem;
+}
+
+.custom-field input {
+	width: 20rem;
+	height: 1rem;
+	padding: 12px;
+
+}
+
+.custom-field select {
+	appearance: none;
+	background: url("https://img.icons8.com/ios-glyphs/14/4a90e2/sort-down.png") no-repeat center right 18px;
+
+	width: 21.7rem;
+	height: 2.8rem;
+
+	padding-left: 12px;
+}
+
+.custom-field textarea {
+	width: 43.2rem;
+	height: 5rem;
+
+	padding: 16px;
+}
+
+/* #label-message {
+	margin-top: 0.3rem;
+} */
+
+.custom-field input, select, textarea {
+	font-weight: 300;
+	font-size: 0.8rem;
+
+	outline: none;
+	border: 1px solid #aaaa;
+	border-radius: 6px;
+	transition: border 0.3s ease;
+	color: var(--gray);
+
+	resize: none;
+
+}
+
+.custom-field .placeholder {
+	position: absolute;
+	left: 1rem;
+	top: calc(30% + 6px);
+
+	transform: translateY(-30%);
+	color: var(--gray);
+}
+
+.custom-field .placeholder-message {
+	position: absolute;
+	left: 1rem;
+	top: calc(8% + 6px);
+
+	transform: translateY(-30%);
+	color: var(--gray);
+}
+
+.custom-field span:hover {
+	cursor: text;
+}
+
+.custom-field #message:focus {
+	border: 1.6px solid var(--dark-blue);
+	transition-delay: 0.1s;
+}
+
+.message-ontext {
+	border: 1.6px solid var(--dark-blue);
+	transition-delay: 0.1s;
+}
+
+.message-ontext + .placeholder-message {
+	top: 10px;
+	font-size: 10px;
+	color: var(--dark-blue);
+
+	transition: 
+	top 0.3s ease,
+	font-size 0.3s ease,
+	color 0.3s ease;
+}
+
+.custom-field #message:focus + .placeholder-message {
+	top: 10px;
+	font-size: 10px;
+	color: var(--dark-blue);
+
+	transition: 
+	top 0.3s ease,
+	font-size 0.3s ease,
+	color 0.3s ease;
+}
+
+.custom-field input:valid,
+.custom-field input:focus,
+.custom-field select:focus {
+	border: 1.6px solid var(--dark-blue);
+	transition-delay: 0.1s;
+}
+
+.custom-field input:focus + .placeholder,
+.custom-field input:valid + .placeholder {
+	top: 7px;
+	font-size: 10px;
+	color: var(--dark-blue);
+
+	transition: 
+	top 0.3s ease,
+	font-size 0.3s ease,
+	color 0.3s ease;
+}
+
+.field-ontext {
+	border: 1.6px solid var(--dark-blue);
+	transition-delay: 0.1s;
+}
+
+.field-ontext + placeholder {
+	top: 7px;
+	font-size: 10px;
+	color: var(--dark-blue);
+
+	transition: 
+	top 0.3s ease,
+	font-size 0.3s ease,
+	color 0.3s ease;
+}
+
+.container form button {
+	width: 7rem;
+	padding: 0.7rem 0 0.6rem 0;
+	margin: 0.5rem 0rem 0rem 38.4rem;
+
+	background:  var(--button);
+	color: var(--button-title);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
+
+	border: none;
+	border-radius: 3px;
+
+	font-weight: 300;
+}
+
+.container form button:hover {
+	cursor: pointer;
+	filter: saturate(80%);
+	transition: filter 0.3s;
+}
+
+.custom-field .invalid {
+	border: 1px solid red;
+}
+
+.custom-field .invalid + .placeholder,
+.custom-field .invalid + .placeholder-message {
+	top: 7px;
+	font-size: 10px;
+	color: red;
+
+	transition: 
+	top 0.3s ease,
+	font-size 0.3s ease,
+	color 0.3s ease;
+}
